@@ -125,24 +125,24 @@ z = 2.9
 is_hot = False
 is_cold = True
 
-if is_hot:
-    print("It's a hot day")
-    print("Drink plenty of water")
-elif is_cold:
-    print("It's a cold day")
-    print("Wear warm cloth")
+# if is_hot:
+#     print("It's a hot day")
+#     print("Drink plenty of water")
+# elif is_cold:
+#     print("It's a cold day")
+#     print("Wear warm cloth")
      
-else:
-    print("Enjoy your day")
+# else:
+#     print("Enjoy your day")
 
 """
     Logical operators  e.g  OR, AND , NOT
 """
-has_high_income = True
-has_good_credit = True
+# has_high_income = True
+# has_good_credit = True
 
-if has_good_credit and has_good_credit:
-    print("El,igible for a loan")
+# if has_good_credit and has_good_credit:
+#     print("El,igible for a loan")
 
 """
     Comparison operators >, >=, <=, ==,!=
@@ -174,28 +174,63 @@ if has_good_credit and has_good_credit:
     1. list, characters
 """
 
-for item in "Python":
-    print(item)
-# output: loops through the word e.g P, y, t, h, o, n
+# for item in "Python":
+#     print(item)
+# # output: loops through the word e.g P, y, t, h, o, n
 
-for item in [1, 2, 3, 4, 5]:
-    print(item)
+# for item in [1, 2, 3, 4, 5]:
+#     print(item)
 
 # range => create a object., which can iteralate over
-for item in range(10):
-    print(item)
+# for item in range(10):
+#     print(item)
 
 # Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 
-for item in range(5, 10):
-    print(item)
+# for item in range(5, 10):
+#     print(item)
 
-# output: start from 5, 6, 7, 8, 9
+# # output: start from 5, 6, 7, 8, 9
 
-for item in range(5, 10, 2):
-    print(item)
+# for item in range(5, 10, 2):
+#     print(item)
 
-# output: 5, then goes 2 step forward, 7, then goes 2 step forward print 9
+# # output: 5, then goes 2 step forward, 7, then goes 2 step forward print 9
 
-#  output: 5, 7, 9
+# #  output: 5, 7, 9
 
+prices = [10, 20, 30]
+total = 0
+
+for price in prices:
+    total += price
+
+# print(f"Total: {total}")
+
+"""
+    nested loop
+"""
+
+# for x in range(4):
+#     for y in range(3):
+#         print(f'({x}, {y})')
+
+
+"""
+OUTPUT::
+XXXXX
+XX
+XXXXX
+XX
+XX
+"""
+numbers = [2, 2, 2, 2, 15]
+
+# for x in numbers:
+#     print(f'x' * x)
+
+for x_count in numbers:
+    output = ''
+    for count in range(x_count):
+        output += 'X'
+    print(output)
