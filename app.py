@@ -148,12 +148,25 @@ if has_good_credit and has_good_credit:
     Comparison operators >, >=, <=, ==,!=
 """
 
-weight = int(input("Weight: "))
-unit = input('(L)bs or (K)g: ')
+# weight = int(input("Weight: "))
+# unit = input('(L)bs or (K)g: ')
 
-if unit.upper() == "L":
-    converted = weight * 0.45
-    print(f"You'r {converted} kilos")
-else:
-    converted = weight / 0.45
-    print(f"You're {converted} pounds")
+# if unit.upper() == "L":
+#     converted = weight * 0.45
+#     print(f"You'r {converted} kilos")
+# else:
+#     converted = weight / 0.45
+#     print(f"You're {converted} pounds")
+
+"""
+    While Loops
+"""
+# initialize or asign i 1
+i = 1
+while i<= 5:
+    print("*" * i)
+    # Increment i
+    i += 1
+print("Done")
+
+
