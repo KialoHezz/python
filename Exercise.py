@@ -60,33 +60,45 @@ guess_limit = 3
                2. stop => car Stoped
                3. quit => terminates the loop
 """
-# dry => dont repeat yourself
-command = ""
-started = False
-while True:
-    command = input(">").lower()
-    if command == 'start':
-        if started:
-            print("car already started")
-        else:
-            started = True
-        print("Car started ...")
-    elif command == 'stopped':
-        if not started:
-            print("Car already stopped")
-        else:
-            started = False
-        print("Car Stopped")
+# # dry => dont repeat yourself
+# command = ""
+# started = False
+# while True:
+#     command = input(">").lower()
+#     if command == 'start':
+#         if started:
+#             print("car already started")
+#         else:
+#             started = True
+#         print("Car started ...")
+#     elif command == 'stopped':
+#         if not started:
+#             print("Car already stopped")
+#         else:
+#             started = False
+#         print("Car Stopped")
 
-    elif command == "help":
-        print("""
-start - to start the car
-stop - to stop the car
-quit - to quit
-        """)
-    elif command == 'quit':
-        break
+#     elif command == "help":
+#         print("""
+# start - to start the car
+# stop - to stop the car
+# quit - to quit
+#         """)
+#     elif command == 'quit':
+#         break
     
-    else:
-        print("sorry I don't understand that")
+#     else:
+#         print("sorry I don't understand that")
 
+"""
+    write a program to find the largest number in a list
+"""
+
+numbers = [1, 20, 3, 40, 50]
+
+max = numbers[0]
+
+for number in numbers:
+    if number > max:
+        max = number
+print(max)

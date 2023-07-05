@@ -233,4 +233,17 @@ for x_count in numbers:
     output = ''
     for count in range(x_count):
         output += 'X'
-    print(output)
+    # print(output)
+
+
+    """
+        LIST
+    """
+n = ["John", "Allan", "Hezron", "Baraka"]
+# print(n)
+# accessing individual in a list
+# print(n[-1])
+# access in a range
+print(n[:3])
+
+
