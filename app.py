@@ -174,11 +174,12 @@ if has_good_credit and has_good_credit:
     1. list, characters
 """
 
-# for item in "Python":
-#     print(item)
+for item in "Python":
+    print(item)
+# output: loops through the word e.g P, y, t, h, o, n
 
-# for item in [1, 2, 3, 4, 5]:
-#     print(item)
+for item in [1, 2, 3, 4, 5]:
+    print(item)
 
 # range => create a object., which can iteralate over
 for item in range(10):
