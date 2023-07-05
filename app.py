@@ -160,13 +160,41 @@ if has_good_credit and has_good_credit:
 
 """
     While Loops
-"""
-# initialize or asign i 1
-i = 1
-while i<= 5:
-    print("*" * i)
-    # Increment i
-    i += 1
-print("Done")
+# """
+# # initialize or asign i 1
+# i = 1
+# while i<= 5:
+#     print("*" * i)
+#     # Increment i
+#     i += 1
+# print("Done")
 
+"""
+    For loops => iteralate over character in a string
+    1. list, characters
+"""
+
+# for item in "Python":
+#     print(item)
+
+# for item in [1, 2, 3, 4, 5]:
+#     print(item)
+
+# range => create a object., which can iteralate over
+for item in range(10):
+    print(item)
+
+# Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+for item in range(5, 10):
+    print(item)
+
+# output: start from 5, 6, 7, 8, 9
+
+for item in range(5, 10, 2):
+    print(item)
+
+# output: 5, then goes 2 step forward, 7, then goes 2 step forward print 9
+
+#  output: 5, 7, 9
 

@@ -61,12 +61,21 @@ guess_limit = 3
                3. quit => terminates the loop
 """
 # dry => dont repeat yourself
+command = ""
+started = False
 while True:
     command = input(">").lower()
-
     if command == 'start':
+        if started:
+            print("car already started")
+        else:
+            started = True
         print("Car started ...")
     elif command == 'stopped':
+        if not started:
+            print("Car already stopped")
+        else:
+            started = False
         print("Car Stopped")
 
     elif command == "help":
