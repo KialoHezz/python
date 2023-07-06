@@ -438,3 +438,10 @@ print(point2)
 
 import converts
 print(converts.kg_to_lbs(7))
+
+
+# Package
+
+import ecommerce.shipping
+
+ecommerce.shipping.calc_shipping()
