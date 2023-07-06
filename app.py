@@ -237,7 +237,7 @@ for x_count in numbers:
 
 
     """
-        LIST
+        LIST => it's array which can hold different data types such as integer, strings, float
     """
 n = ["John", "Allan", "Hezron", "Baraka"]
 # print(n)
@@ -361,8 +361,15 @@ customer = {
 """
     function => build large program, we need to break down
 """
-def greet_user():
-    print('Hi there')
+"""
+    parameters => are place holder
+"""
+def greet_user(first_name, last_name):
+    print(f'Hi there {first_name} {last_name}')
+# arqument => position arqument
 
-# print(greet_user())
+print(greet_user("hezron", "ngoma"))
+
+# key argument
+print(greet_user(last_name="hezron", first_name="ngoma"))
 
