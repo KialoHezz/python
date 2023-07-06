@@ -270,7 +270,7 @@ matrix = [
 #         print(item)
 
 # modifying element in the 2D list
-matrix[1][1] = 0
+# matrix[1][1] = 0
 # print(matrix)
 
 
@@ -280,12 +280,12 @@ matrix[1][1] = 0
 
 numbers = [5, 2, 1, 7, 4]
 
-numbers.append(13)
-numbers.insert(0, 10)
-numbers.remove(5)
+# numbers.append(13)
+# numbers.insert(0, 10)
+# numbers.remove(5)
 # numbers.clear()
-numbers.pop()
-numbers.sort()
+# numbers.pop()
+# numbers.sort()
 # return no. of elements are the same
 # numbers.count()
 # numbers.reverse()
@@ -364,14 +364,14 @@ customer = {
 """
     parameters => are place holder
 """
-def greet_user(first_name, last_name):
-    print(f'Hi there {first_name} {last_name}')
+# def greet_user(first_name, last_name):
+#     print(f'Hi there {first_name} {last_name}')
 # arqument => position arqument
 
-print(greet_user("hezron", "ngoma"))
+# print(greet_user("hezron", "ngoma"))
 
 # key argument
-print(greet_user(last_name="hezron", first_name="ngoma"))
+# print(greet_user(last_name="hezron", first_name="ngoma"))
 
 # return statement
 def square(num):
@@ -383,14 +383,47 @@ def square(num):
 """
     EXCEPTIONS
 """
-try: 
-    age = int(input('Age: '))
-    income = 2000
-    risk = income / age
-    print(age)
-except ZeroDivisionError:
-    print("Age Cann't be Zero")
+# try: 
+#     age = int(input('Age: '))
+#     income = 2000
+#     risk = income / age
+#     print(age)
+# except ZeroDivisionError:
+#     print("Age Cann't be Zero")
     
-except ValueError:
-    print('Invalid Value')
+# except ValueError:
+#     print('Invalid Value')
     
+
+"""
+    classes => is custom datatypes and blueprint of a object.
+    ================================= BASIC TYPES =============================================
+    1. Numbers
+    2. Strings
+    3. Booleans
+
+    ================================= Complex Types =============================================
+    1. List
+    2. Dictionaries
+"""
+
+# Use class keyword and name-of-you-class and shld start with Capital Letter and re
+class Point:
+    def move(self):
+        print("Move")
+
+    def draw(self):
+        print("draw")
+
+# object is a instance of a class
+
+point1 = Point()
+point1.x = 10
+point1.y = 20
+# print(point1.y)
+# point1.draw()
+
+
+point2 = Point()
+print(point2)
+
