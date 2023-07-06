@@ -294,4 +294,14 @@ numbers2 = numbers.copy()
 # print(numbers.index(1))
 # print(numbers)
 
-print(50 in numbers)
+# print(50 in numbers)
+
+"""
+    TUPLES => are immutable
+"""
+
+numbers = (1, 2, 3)
+
+# methods
+numbers.count()
+numbers.index()
