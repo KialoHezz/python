@@ -409,6 +409,11 @@ def square(num):
 
 # Use class keyword and name-of-you-class and shld start with Capital Letter and re
 class Point:
+    # construtor
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
     def move(self):
         print("Move")
 

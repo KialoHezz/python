@@ -146,3 +146,21 @@ for number in numbers:
     Convert Emoji
 """
 
+"""
+    Person 
+        - name
+        - talk()
+"""
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+
+
+hezon = Person("Hezron")
+hezon.talk()
+        
