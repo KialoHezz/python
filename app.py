@@ -326,4 +326,34 @@ coordinates = (1, 2, 3)
 # NOTED :: UNPACKING IS NOT LIMITED TO TUPLES ONLY BUT YOU CAN USE IT TO LIST ALSO.
 x, y, z = coordinates
 
-print(x, z, y)
+# print(x, z, y)
+
+
+"""
+    Dictionary
+"""
+
+# think that customer has attributes like name, age, phone, email
+
+# E.G
+
+"""
+    name : John
+    email: hezzy@kialo.com
+    phone: +25470000000
+
+    Dictionary has keys and values, therefore, in my case the keys are name, email & phone and value are John, hezzy@kialo.com & 25470000000 respectively
+"""
+
+# Define a Dictionary
+
+customer = {
+    "name": "John",
+    "age": 30,
+    "is_verified": True
+}
+
+# access by keyvalue
+print(customer["name"])
+# use get method => return none value becoz  the key doesn't exist
+print(customer.get("bith"))
