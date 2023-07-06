@@ -156,13 +156,13 @@ class Person:
     def __init__(self, name):
         self.name = name
 
-    def talk(self):
-        print(f"Hi, I am {self.name}")
+    # def talk(self):
+    #     print(f"Hi, I am {self.name}")
 
 
 
-hezon = Person("Hezron")
-hezon.talk()
+# hezon = Person("Hezron")
+# hezon.talk()
 
 """
     Inheritance
@@ -180,11 +180,21 @@ class Cat(Mammal):
 
 # Instance Object Dog
 dog1 = Dog()
-dog1.bark()
+# dog1.bark()
 
 """
     Modules
 """
+import random
+class Dice:
+    def roll(self):
+        first = random.randint(1, 6)
+        second = random.randint(1, 6)
 
+        return (first, second)
+    
+dice = Dice()
+
+print(dice.roll())
 
 
