@@ -101,4 +101,21 @@ max = numbers[0]
 for number in numbers:
     if number > max:
         max = number
-print(max)
+# print(max)
+
+"""
+    Write a program to remove  the duplicates in a list.
+"""
+# list
+numbers =  [2, 2, 4, 6, 3, 4, 8, 2]
+
+uniques = []
+# looping through the list element
+for number in numbers:
+    # condition to check if the element have a duplicate
+    if number not in uniques:
+        uniques.append(number)
+print(uniques)
+
+
+# Output => [2, 4, 6, 3, 8]
