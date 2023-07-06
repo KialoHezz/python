@@ -244,6 +244,32 @@ n = ["John", "Allan", "Hezron", "Baraka"]
 # accessing individual in a list
 # print(n[-1])
 # access in a range
-print(n[:3])
+# print(n[:3])
 
+
+"""
+    2D LISTS => are stream powerful and have alot application in data science  and machine language.
+    It's a rectangle array of elements which have rows and column 
+"""
+# matrix list
+matrix = [
+    # 1st list
+    [1, 2, 3],
+    # 2nd list
+    [4, 5, 6],
+    # 3rd list
+    [7, 8, 9]
+]
+
+# access
+
+# print(matrix[0])
+# # loop through the 2D list
+# for row in matrix:
+#     for item in row:
+#         print(item)
+
+# modifying element in the 2D list
+matrix[1][1] = 0
+print(matrix)
 
