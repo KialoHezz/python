@@ -465,4 +465,28 @@ members = ['John', 'Mary', 'Bob', 'Hezron']
 # print(random.choice(members))
 
 
+"""
+    files and Directories
+"""
+
+from pathlib import Path
+
+# Path() => is a class and it will reference the current directory
+
+path = Path("emails")
+# print(path.exists())  
+# print(path.mkdir())
+# print(path.rmkdir())
+
+# print(path.glob('*.py'))
+
+for file in path.glob('*.py'):
+    print(file)
+
+
+
+
+
+
+
 
