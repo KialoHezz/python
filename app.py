@@ -287,10 +287,10 @@ numbers.remove(5)
 numbers.pop()
 numbers.sort()
 # return no. of elements are the same
-numbers.count()
-numbers.reverse()
+# numbers.count()
+# numbers.reverse()
 # copy of numbers list
-numbers2 = numbers.copy()
+# numbers2 = numbers.copy()
 # print(numbers.index(1))
 # print(numbers)
 
@@ -303,5 +303,27 @@ numbers2 = numbers.copy()
 numbers = (1, 2, 3)
 
 # methods
-numbers.count()
-numbers.index()
+# numbers.count()
+# numbers.index()
+
+"""
+    Unpacking
+"""
+
+coordinates = (1, 2, 3) 
+
+# print(coordinates[0] * coordinates[1] * coordinates[2])
+
+# # OR
+# x = coordinates[0]
+# y = coordinates[1]
+# z = coordinates[2]
+
+# print(x * y * z)
+
+# On packing, the python intepret will check 1st element and assign to x, check the next element and assign to y and last element and assign to z.
+
+# NOTED :: UNPACKING IS NOT LIMITED TO TUPLES ONLY BUT YOU CAN USE IT TO LIST ALSO.
+x, y, z = coordinates
+
+print(x, z, y)
