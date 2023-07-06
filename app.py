@@ -422,22 +422,22 @@ class Point:
 
 # object is a instance of a class
 
-point1 = Point()
-point1.x = 10
-point1.y = 20
+# point1 = Point()
+# point1.x = 10
+# point1.y = 20
 # print(point1.y)
 # point1.draw()
 
 
-point2 = Point()
-print(point2)
+# point2 = Point()
+# print(point2)
 
 """]
     Module used to organize our code
 """
 
 import converts
-print(converts.kg_to_lbs(7))
+# print(converts.kg_to_lbs(7))
 
 
 # Package
@@ -445,6 +445,24 @@ print(converts.kg_to_lbs(7))
 import ecommerce.shipping
 from  ecommerce.shipping import calc_shipping
 
-ecommerce.shipping.calc_shipping()
+# ecommerce.shipping.calc_shipping()
 
-calc_shipping()
+# calc_shipping()
+
+"""
+    Use Inbuilt module
+"""
+
+import random
+
+# for i in range(3):
+#     print(random.randint(10, 20))
+
+
+# list 
+
+members = ['John', 'Mary', 'Bob', 'Hezron']
+# print(random.choice(members))
+
+
+
