@@ -378,4 +378,14 @@ def square(num):
     return num * num
 
 
-print(square(3))
+# print(square(3))
+
+"""
+    EXCEPTIONS
+"""
+try: 
+    age = int(input('Age: '))
+    print(age)
+except ValueError:
+    print('Invalid Value')
+    
