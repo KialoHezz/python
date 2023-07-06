@@ -354,6 +354,15 @@ customer = {
 }
 
 # access by keyvalue
-print(customer["name"])
+# print(customer["name"])
 # use get method => return none value becoz  the key doesn't exist
 # print(customer.get("bith"))
+
+"""
+    function => build large program, we need to break down
+"""
+def greet_user():
+    print('Hi there')
+
+# print(greet_user())
+
