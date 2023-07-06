@@ -163,4 +163,20 @@ class Person:
 
 hezon = Person("Hezron")
 hezon.talk()
-        
+
+"""
+    Inheritance
+"""    
+class Mammal:
+    def walk():
+        print("Walk")
+
+class Dog(Mammal):
+    def bark():
+        print("Bark")
+
+class Cat(Mammal):
+    pass
+
+dog1 = Dog
+dog1.bark()
