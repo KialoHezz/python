@@ -356,4 +356,4 @@ customer = {
 # access by keyvalue
 print(customer["name"])
 # use get method => return none value becoz  the key doesn't exist
-print(customer.get("bith"))
+# print(customer.get("bith"))

@@ -115,7 +115,34 @@ for number in numbers:
     # condition to check if the element have a duplicate
     if number not in uniques:
         uniques.append(number)
-print(uniques)
+# print(uniques)
 
 
 # Output => [2, 4, 6, 3, 8]
+
+"""
+    write a program which can intepret the numbers in words
+"""
+# declare variable and use print() => output at terminal and input()=> user can key in information
+phone = print(input("Phone: "))
+# use dictionary coz they help in mapping the key with value.
+# E.G
+# "1" -> "One"
+# "2" -> "Two"
+# "3" -> "Three"
+digits_mapping = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three"
+}
+# loop through the phone
+output = ""
+for ch in phone:
+    output += digits_mapping.get(ch, "!") +  " "
+print(output)
+
+
+
+
+
+print(phone)
