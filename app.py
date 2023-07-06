@@ -373,3 +373,9 @@ print(greet_user("hezron", "ngoma"))
 # key argument
 print(greet_user(last_name="hezron", first_name="ngoma"))
 
+# return statement
+def square(num):
+    return num * num
+
+
+print(square(3))
