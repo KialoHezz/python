@@ -178,5 +178,13 @@ class Dog(Mammal):
 class Cat(Mammal):
     pass
 
-dog1 = Dog
+# Instance Object Dog
+dog1 = Dog()
 dog1.bark()
+
+"""
+    Modules
+"""
+
+
+
