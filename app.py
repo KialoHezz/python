@@ -271,5 +271,27 @@ matrix = [
 
 # modifying element in the 2D list
 matrix[1][1] = 0
-print(matrix)
+# print(matrix)
 
+
+"""
+    LIST METHODS
+"""
+
+numbers = [5, 2, 1, 7, 4]
+
+numbers.append(13)
+numbers.insert(0, 10)
+numbers.remove(5)
+# numbers.clear()
+numbers.pop()
+numbers.sort()
+# return no. of elements are the same
+numbers.count()
+numbers.reverse()
+# copy of numbers list
+numbers2 = numbers.copy()
+# print(numbers.index(1))
+# print(numbers)
+
+print(50 in numbers)
