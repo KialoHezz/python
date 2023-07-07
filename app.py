@@ -538,4 +538,16 @@ def process_workbook(filename):
 """
 
 
+"""
+    Libraries and Tools
+
+    ================================== LIBRARIES ==================================
+    1. NUMPY => PROVIDE A MULTI-DIMENISION ARRAY
+    2. PANDAS => DATA ANALYSIS THAT PROVIDE A CONCEPT CALL DATA FRAME. DATA FRAME IS A TWO DIMESION STRUCTURE SIMILARY EXCEL [ROWS, COLUMNS]
+    3. MATPLOTLIB => TWO DIMESION FOR CREATING MAP AND PLOTS
+    4. SCIKIT-LEARN
+
+"""
+
+
 
