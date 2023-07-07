@@ -469,11 +469,11 @@ members = ['John', 'Mary', 'Bob', 'Hezron']
     files and Directories
 """
 
-from pathlib import Path
+# from pathlib import Path
 
 # Path() => is a class and it will reference the current directory
 
-path = Path("emails")
+# path = Path("emails")
 # print(path.exists())  
 # print(path.mkdir())
 # print(path.rmkdir())
@@ -516,7 +516,7 @@ def process_workbook(filename):
 
     sheet.add_chart(chart, 'e2')
 
-    print(wb.save(filename))
+    # print(wb.save(filename))
 
 
 """
@@ -550,4 +550,19 @@ def process_workbook(filename):
 """
 
 
+# Import a Data Set
+import pandas as pd
 
+# df = pd.read_csv('PS4_GamesSales.csv')
+
+# print(df)
+
+# Useful methods and Attributes in pandas :: GET more in pandas documentation
+
+
+# Create new directory
+from pathlib import Path
+
+path = Path("Intermediate")
+
+path.mkdir() #then execute You shall see new directory call Intermediate
