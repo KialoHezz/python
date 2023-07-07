@@ -517,3 +517,25 @@ def process_workbook(filename):
     sheet.add_chart(chart, 'e2')
 
     print(wb.save(filename))
+
+
+"""
+    WHAT'S MACHINE LEARNING 
+    1. Self-driving Cars
+    2. Robotics
+    3. Language Processing
+    4. Vision Processing
+    5. Forecasting Stock Market Trends
+
+    ================ Involves Number of steps =================
+    STEP 1 - Import the Data => store into csv files
+    STEP 2 - Clean the Data => input data is clean || depends with the data we are working with
+    STEP 3 -  Split the Data into segments[Traning / Test set] e.g 80% for training and 20% for testing
+    STEP 4 - Create a model - selecting a algorithm to analyse the data. the algorithms include:- Decesion trees, Neurol networks
+    STEP 5 - Train the model
+    STEP 6 - Make Predictions
+    STEP 7 - Evaluate and improve
+"""
+
+
+
