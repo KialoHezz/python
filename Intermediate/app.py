@@ -29,5 +29,28 @@ student_list = ["Baraka", "Bob", "Hezron", "Charles", "Bobel"]
 
 # instantiated the obj
 students_obj = Students()
-students_obj.generate_marks(student_list)
-students_obj.display_results()
+# students_obj.generate_marks(student_list)
+# students_obj.display_results()
+
+"""
+    Write a python program that takes a sentence as input and counts the frequency of each word in the sentence. Display the word frequencies in descending order
+"""
+# prompt user to key in the sentence
+user_input = input("write your sentence: ")
+
+# split the words => split method returns a array
+words = user_input.split(" ")
+
+# dictionary
+word_frequencies = {}
+# iterate the array
+for word in words:
+    # condition
+    if word in word_frequencies:
+        # already exists, therefore, increment the value
+        word_frequencies[word] += 1
+    else:
+        # Initialize
+        word_frequencies[word] = 1
+print(word_frequencies)
+
