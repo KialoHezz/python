@@ -565,4 +565,4 @@ from pathlib import Path
 
 path = Path("Intermediate")
 
-path.mkdir() #then execute You shall see new directory call Intermediate
+# path.mkdir() #then execute You shall see new directory call Intermediate
