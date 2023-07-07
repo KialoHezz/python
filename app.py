@@ -478,13 +478,44 @@ path = Path("emails")
 # print(path.mkdir())
 # print(path.rmkdir())
 
+"""
+    Automation with python 
+"""
+import openpyxl as xl
+
+wb = xl.load_workbook('transactions.xlsx')
+
+# return sheet
+sheet = wb['Sheet1']
+
+# cell
+# cell = sheet['a1']
+# OR
+cell = sheet.cell(1, 1)
+# print(cell.value)
+# # check the no. of rows
+# print(sheet.max_row)
+# # check the no. of column
+# print(sheet.max_column)
+
+# iterate
+for row in range(2, sheet.max_row +1):
+    cell = sheet.cell(row, 3)
+    corrected_price = cell.value * 0.9
+    corrected_price_cell = sheet.cell(row, 4) 
+    corrected_price_cell.value = corrected_price
+
+print(wb.save('transactions2.xlsx'))
+
+# iterate throught excel row
+
+
+
+
 # print(path.glob('*.py'))
 
-for file in path.glob('*.py'):
-    print(file)
-
-
-
+# for file in path.glob('*.py'):
+#     print(file)
 
 
 
