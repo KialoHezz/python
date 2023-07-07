@@ -477,6 +477,10 @@ path = Path("emails")
 # print(path.exists())  
 # print(path.mkdir())
 # print(path.rmkdir())
+# print(path.glob('*.py'))
+
+# for file in path.glob('*.py'):
+#     print(file)
 
 """
     Automation with python 
@@ -484,49 +488,32 @@ path = Path("emails")
 import openpyxl as xl
 from openpyxl.chart import BarChart, Reference
 
-wb = xl.load_workbook('transactions.xlsx')
+def process_workbook(filename):
+    wb = xl.load_workbook(filename)
+    sheet = wb['Sheet1']
+    # cell
+    # cell = sheet['a1']
+    # OR
+    cell = sheet.cell(1, 1)
+    # print(cell.value)
+    # # check the no. of rows
+    # print(sheet.max_row)
+    # # check the no. of column
+    # print(sheet.max_column)
 
-# return sheet
-sheet = wb['Sheet1']
+    # iterate
+    for row in range(2, sheet.max_row +1):
+        cell = sheet.cell(row, 3)
+        corrected_price = cell.value * 0.9
+        corrected_price_cell = sheet.cell(row, 4) 
+        corrected_price_cell.value = corrected_price
 
-# cell
-# cell = sheet['a1']
-# OR
-cell = sheet.cell(1, 1)
-# print(cell.value)
-# # check the no. of rows
-# print(sheet.max_row)
-# # check the no. of column
-# print(sheet.max_column)
+    values = Reference(sheet, min_row=2, max_row=sheet.
+                    max_row, min_col=4, max_col=4)
 
-# iterate
-for row in range(2, sheet.max_row +1):
-    cell = sheet.cell(row, 3)
-    corrected_price = cell.value * 0.9
-    corrected_price_cell = sheet.cell(row, 4) 
-    corrected_price_cell.value = corrected_price
+    chart = BarChart()
+    chart.add_data(values)
 
-values = Reference(sheet, min_row=2, max_row=sheet.
-                   max_row, min_col=4, max_col=4)
+    sheet.add_chart(chart, 'e2')
 
-chart = BarChart()
-chart.add_data(values)
-
-sheet.add_chart(chart, 'e2')
-
-print(wb.save('transactions2.xlsx'))
-
-# iterate throught excel row
-
-
-
-
-# print(path.glob('*.py'))
-
-# for file in path.glob('*.py'):
-#     print(file)
-
-
-
-
-
+    print(wb.save(filename))
