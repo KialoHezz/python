@@ -222,3 +222,23 @@ def add10_func(x):
 
 points2D = [(1, 2), (15, 1), (5, -1), (10, 4)]
 points2D_sorted = sorted(points2D, key=lambda x: x[1])
+
+
+# map(func, seq)
+# filter(func, seq) => returns true or false
+a = [1, 2, 3]
+b = map(lambda x: x*2, a)
+print(list(b))
+
+# list compression
+c = [x*2 for x in a]
+print(c)
+
+# filter
+c = filter(x for x in a if x%2==0)
+
+# reduce(func, seq)
+from functools import reduce
+prod_a = reduce(lambda x, y: x*y , a)
+
+print(prod_a)
