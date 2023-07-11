@@ -76,4 +76,12 @@ primes = {2, 3, 5, 7}
 u = odds.union(evens)
 # print(u) 
 
+# Intersection
+i = odds.intersection(primes)
+print(i)
+
+# .isesubset, 
+
+
+
 # Union and interset
