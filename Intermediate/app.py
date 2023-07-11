@@ -83,5 +83,26 @@ print(i)
 # .isesubset, 
 
 
-
+"""
+    String: order, Immutable, text representation.
+    1. Loop
+    2. sep => default is a space, therefore, when use sep="wil" , it will output what your have specificed
+    3.  end
+    4. Methods :=> strip(), startswith(), lower()
+"""
 # Union and interset
+greetings = "Hello"
+for x in greetings:
+    if 'e'  in x:
+        print("It's available", sep="", end="")
+
+my_list = ['a'] * 6
+print(my_list)
+
+my_string = ''.join(my_list)
+print(my_string)
+
+
+
+
+
