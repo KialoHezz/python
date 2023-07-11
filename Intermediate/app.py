@@ -36,21 +36,44 @@ students_obj = Students()
     Write a python program that takes a sentence as input and counts the frequency of each word in the sentence. Display the word frequencies in descending order
 """
 # prompt user to key in the sentence
-user_input = input("write your sentence: ")
+# user_input = input("write your sentence: ")
 
 # split the words => split method returns a array
-words = user_input.split(" ")
+# words = user_input.split(" ")
 
 # dictionary
-word_frequencies = {}
+# word_frequencies = {}
 # iterate the array
-for word in words:
+# for word in words:
     # condition
-    if word in word_frequencies:
+    # if word in word_frequencies:
         # already exists, therefore, increment the value
-        word_frequencies[word] += 1
-    else:
-        # Initialize
-        word_frequencies[word] = 1
-print(word_frequencies)
+        # word_frequencies[word] += 1
+    # else:
+    #     # Initialize
+    #     word_frequencies[word] = 1
+# print(word_frequencies)
 
+mydictionary = {
+    "name": "Hezron",
+    "age": 23,
+    "city": "Nairobi"
+}
+
+# for key, value in mydictionary.items():
+#     print(f"{key} {value}")
+
+"""
+    In summary : List, Dictionary, Tuples, Sets, => How to access, there methods, Loop through, Check whether element exist, 
+"""
+# Sets: Unorder, Mutable, No Duplicate
+# e.g 
+odds = {1, 3, 5, 7, 9}
+evens =  {0, 2, 4, 6, 6, 8}
+primes = {2, 3, 5, 7}
+
+# Union => adds both sets with No duplication
+u = odds.union(evens)
+# print(u) 
+
+# Union and interset
