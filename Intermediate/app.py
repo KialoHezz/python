@@ -78,7 +78,7 @@ u = odds.union(evens)
 
 # Intersection
 i = odds.intersection(primes)
-print(i)
+# print(i)
 
 # .isesubset, 
 
@@ -142,5 +142,44 @@ from collections import Counter
 a = "aaaaaabbbbbcccc"
 # Counter returns Dictionary
 my_counter = Counter(a)
-print(my_counter.items())
+# print(my_counter.items())
 
+
+# Deque
+from collections import deque
+
+d = deque()
+
+d.append(1)
+d.append(2)
+
+d.appendleft(3)
+# print(d)
+
+
+d.extendleft([4, 5, 6])
+
+# print(d)
+
+"""
+    Itertools:=> it's module tools for handling iitertors, are data types that can be used in a for loop. 
+    ITERTOOLS OFFERS ADVANCED TOOLS SUCH AS:-
+        1. Product => return a list
+        2. Permutatuions => return all possible ordering of an input
+        3. Combinations
+        4. Acculate
+        5. Groupby
+        6. Infinite iterators
+"""
+
+from itertools import product, permutations
+
+a = [1, 2]
+b = [3, 4, 5, 6]
+
+prod = product(a,b)
+# print(list(prod))
+
+x = [3, 4, 6]
+perm = permutations(x)
+print(list(perm))
