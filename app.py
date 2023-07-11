@@ -469,13 +469,13 @@ members = ['John', 'Mary', 'Bob', 'Hezron']
     files and Directories
 """
 
-# from pathlib import Path
+from pathlib import Path
 
 # Path() => is a class and it will reference the current directory
 
-# path = Path("emails")
+path = Path("OOP")
 # print(path.exists())  
-# print(path.mkdir())
+print(path.mkdir())
 # print(path.rmkdir())
 # print(path.glob('*.py'))
 
