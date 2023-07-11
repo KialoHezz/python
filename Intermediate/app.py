@@ -91,16 +91,29 @@ print(i)
     4. Methods :=> strip(), startswith(), lower()
 """
 # Union and interset
-greetings = "Hello"
-for x in greetings:
-    if 'e'  in x:
-        print("It's available", sep="", end="")
+# greetings = "Hello"
+# for x in greetings:
+#     if 'e'  in x:
+        # print("It's available", sep="", end="")
+from timeit import default_timer as timer
 
 my_list = ['a'] * 6
-print(my_list)
+# print(my_list)
 
+# bad
+start = timer()
+my_string = ''
+for i in my_string:
+    my_string += i
+stop = timer()
+print(stop - start)
+
+# good
+start = timer()
 my_string = ''.join(my_list)
 print(my_string)
+stop = timer()
+print(stop - start)
 
 
 
