@@ -172,7 +172,7 @@ d.extendleft([4, 5, 6])
         6. Infinite iterators
 """
 
-from itertools import product, permutations
+from itertools import product, permutations, groupby
 
 a = [1, 2]
 b = [3, 4, 5, 6]
@@ -183,3 +183,12 @@ prod = product(a,b)
 x = [3, 4, 6]
 perm = permutations(x)
 print(list(perm))
+
+def small_than_3(x):
+    return x < 3
+
+a = [1, 2, 3, 4, 5]
+group_obj = groupby(a, key=small_than_3)
+
+for key, value in group_obj:
+    print(key, list(value))
