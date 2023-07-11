@@ -129,3 +129,18 @@ my_string = "the variable is %s" %var
 
 my_string = "the variable is {} and {}".format(var, var2)
 
+
+
+"""
+    Collections : Counter, namedtuple, orderedDict, defaultdict, deque
+"""
+
+# Counter
+
+from collections import Counter
+
+a = "aaaaaabbbbbcccc"
+# Counter returns Dictionary
+my_counter = Counter(a)
+print(my_counter.items())
+
