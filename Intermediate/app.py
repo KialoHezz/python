@@ -192,3 +192,30 @@ group_obj = groupby(a, key=small_than_3)
 
 for key, value in group_obj:
     print(key, list(value))
+
+
+person = [
+    {'name': 'Tim', 'age': 24},
+    {'name': 'Hezron', 'age': 24},
+    {'name': 'Allan', 'age': 30},
+]
+
+grp_obj = groupby(person, key=lambda x: x['age'])
+for key, value in grp_obj:
+    print(key, list(value))
+
+
+"""
+    LAMBDA => Is a small one line anonymous function that is define without a name.
+
+    SYNTAX:
+    lambda parameter: expression
+"""
+add10 = lambda x: x + 10
+
+print(add10(5))
+
+# OR::
+
+def add10_func(x):
+    return x + 10
