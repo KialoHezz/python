@@ -232,13 +232,59 @@ print(list(b))
 
 # list compression
 c = [x*2 for x in a]
-print(c)
+# print(c)
 
 # filter
-c = filter(x for x in a if x%2==0)
+# c = filter(x for x in a if x%2==0)
 
 # reduce(func, seq)
 from functools import reduce
 prod_a = reduce(lambda x, y: x*y , a)
 
-print(prod_a)
+# print(prod_a)
+
+
+"""
+    Exceptions :=> Python terminate as soon as encouters an error / exceptions.
+
+    Difference btn syntax error and exception?
+    1. TypeError
+    2. ModuleNotFound
+    3. ValueError
+    4. IndexError
+    5. KeyError
+    6. ZeroDivisionError
+
+    NOTE : Understand the possible errors.
+"""
+
+# syntax e.g
+# a = 5 + '10'
+# output => TypeError ~> unsupported operand type
+
+""" import somemodule """
+
+# Output : ModuleNotFoundError: No module named 'somemodule'
+
+# #  Custom raise Exception
+# x = -5
+# if x < 0:
+#     raise Exception('X Should Be Positive')
+
+# Can use  Assert
+
+x = -5
+assert ( x >= 0), 'X is not positive'
+
+
+try:
+    a = 5 / 1
+    b = a + 4
+except ZeroDivisionError as e:
+    print(e)
+except TypeError as e:
+    print(e)
+else:
+    print('Everything is fine')
+finally:
+    print('ckeaning Up ...')
