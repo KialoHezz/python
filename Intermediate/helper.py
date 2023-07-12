@@ -26,11 +26,7 @@ import logging
 #  they indicate the severity of the events
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%m/%d/%Y %H:%M:%S')
 
-# RUN : WWARNING, ERROR & CRITICAL are printed
+import custom
 
-logging.debug('This is a debug message')
-logging.info('Thi is a info message')
-logging.warning('This is a warning message')
-logging.error('This is an error message')
-logging.critical('This is a critical message')
+
 
