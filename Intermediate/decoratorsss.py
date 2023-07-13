@@ -77,5 +77,14 @@ def say_hello():
 # call
 say_hello()
 
+"""
+    Typical Use case of decorators
+    1. timer decorator
+    2. debug decorator
+    3. Check decorator
+    4. Register a function such like plugins 
+    5. You can cache the return values
+"""
+
 
 
