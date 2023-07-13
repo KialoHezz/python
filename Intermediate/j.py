@@ -35,7 +35,13 @@ person = {
 personJSON = json.dumps(person, indent=4, sort_keys=True)
 print(personJSON)
 
-# open file with mode of write
-with open('person.json', 'w') as file:
-    # dump person object
-    json.dump(person, file, indent=4)
+# # open file with mode of write
+# with open('person.json', 'w') as file:
+#     # dump person object
+#     json.dump(person, file, indent=4)
+
+
+# back to python object, it callled deseriliazation.
+
+person = json.loads(personJSON)
+print(person)
