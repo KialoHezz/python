@@ -1,0 +1,9 @@
+GIL: GLOBAL interpreter lock
+- A lock that allows only one thread at a time to execute in python
+
+- Needed in CPython because memory mgt iks not thread-safe
+
+- Avoid:
+    - Use Multiproccessing
+    - Use a diffferent, frfee-threaded python implementation(Jython, IronPython)
+    - Use Python as a wrapper for third-party libraries(C/C++) -> numpy, Scipy
