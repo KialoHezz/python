@@ -25,3 +25,18 @@ print(value)
 
 # Stop looping if doesn't find another yield statement
 # sort()
+
+
+# Execution of a generator
+def countdown(num):
+    print("Starting")
+    while num > 0:
+        yield num
+        num -= 1
+
+# object
+cd = countdown(4)
+
+# get first value
+value = next(cd)
+print(value)
