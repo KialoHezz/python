@@ -79,7 +79,15 @@ class UserEncoder(JSONEncoder):
         
 
 
-userJSON = json.dumps(user, cls=UserEncoder)
+# userJSON = json.dumps(user, cls=UserEncoder)
 # OR
 userJSON = UserEncoder().encode(user)
 print(userJSON)
+
+# decode
+def decode_user(dct):
+    if User.__name__ in dct:
+        return User(name=dct['name'], age=dct['age'])
+    return dct 
+user = json.loads(userJSON, object_hook=decode_user)
+print(user.name)
