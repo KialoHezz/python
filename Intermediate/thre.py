@@ -1,4 +1,4 @@
-from threading import Thread, Lock
+from threading import Thread, Lock, current_thread
 from queue import Queue
 import time
 """
@@ -6,26 +6,31 @@ import time
     for EXAMPLE, Queue of customer waiting in a line
 """
 
+def worker(q, lock):
+    while True:
+        value = q.get()
+
+        # processing
+        with lock:
+            print(f'in {current_thread().name} got {value}')
+            q.task_done()
+
 if __name__ == "__main__":
 
     q = Queue()
+    lock = Lock()
 
-    q.put(1)
-    q.put(2)
-    q.put(3)
+    num_threads = 10
 
-    # 3 2 1 ------> get the first value
-    first  = q.get()
-    print(first)
+    for i in range(num_threads):
+        thread = Thread(target=worker, args=(q, lock, ))
+        thread.daemon = True
+        thread.start()
 
-    # done the processing
-    q.task_done()
-    # block the main queue
+    for i in range(1, 21):
+        q.put(i)
+    
     q.join()
-
-    # # check queue is empty
-    # q.empty()  
-
 
     print('end main')
 
