@@ -9,15 +9,17 @@
     Function in python a first class object => means they can be dfn inside other objects
 """
 def start_end_decorator(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         print('Start')
-        func()
+        result = func(*args, **kwargs)
         print('End')
+        return result
+    
     return wrapper
 
 
 @start_end_decorator
-def print_name():
-    print('Hezron')
+def add(x):
+    return x + 5
 
-print_name()
+add(10)
