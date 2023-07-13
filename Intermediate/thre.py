@@ -5,7 +5,10 @@ import time
 def square_numbers():
     for i in range(100):
         i * i
-        time.sleep(0.1)
+
+if __name__ == "__main__":
+    threads = []
+    num_threads = 10
 
 # create the list where to store all process
 threads = []
@@ -29,3 +32,4 @@ for t in threads:
 
 # reach this point all processes are done
 print('end main')
+
