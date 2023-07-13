@@ -25,5 +25,33 @@ def start_end_decorator(func):
 def add(x):
     return x + 5
 
-print(help(add()))
-print(add.__name__)
+# print(help(add()))
+# print(add.__name__)
+
+# Example of decorators function 
+
+def repeat(num_time):
+    def decorator_repeat(fun):
+
+        @functools.wraps(fun)
+        def wrapper(*args, **kwargs):
+            for _ in range(num_time):
+                result = fun(*args, **kwargs)
+
+            return result
+        return wrapper
+    return decorator_repeat
+
+# decorator
+@repeat(num_time=20)
+# dfn a function greating with parameter name of the person
+def greet(name):
+    print(f'Hello {name}!')
+
+# call the function
+greet('Allan')
+
+
+
+
+
