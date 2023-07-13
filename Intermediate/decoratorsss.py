@@ -1,4 +1,5 @@
 import functools
+from typing import Any
 """
     1. Concept Behind the decorators
     2. Difference between class and function decorators
@@ -46,12 +47,35 @@ def repeat(num_time):
 @repeat(num_time=20)
 # dfn a function greating with parameter name of the person
 def greet(name):
-    print(f'Hello {name}!')
+    # print(f'Hello {name}!')
+    pass
 
 # call the function
 greet('Allan')
 
 
+"""
+    class decorator -> used to maintain and keep the state.
+"""
+class CountCalls:
+    def __init__(self, func):
+        self.func = func
+        # create the state
+        self.num_calls = 0
+    
+    def __call__(self, *args, **kwargs):
+        self.num_calls += 1
+        print(f'This is Executed {self.num_calls} times')
+
+        return self.func(*args, **kwargs)
+
+@CountCalls
+def say_hello():
+    print('Hello')
+
+
+# call
+say_hello()
 
 
 
