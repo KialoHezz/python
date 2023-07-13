@@ -1,3 +1,4 @@
+import functools
 """
     1. Concept Behind the decorators
     2. Difference between class and function decorators
@@ -8,7 +9,9 @@
 """
     Function in python a first class object => means they can be dfn inside other objects
 """
+# Function Identities
 def start_end_decorator(func):
+    @functools.wraps(func)
     def wrapper(*args, **kwargs):
         print('Start')
         result = func(*args, **kwargs)
@@ -22,4 +25,5 @@ def start_end_decorator(func):
 def add(x):
     return x + 5
 
-add(10)
+print(help(add()))
+print(add.__name__)
