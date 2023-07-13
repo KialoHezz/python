@@ -22,6 +22,7 @@
     Serialization from python to json
 """
 import json
+from typing import Any
 
 # python object into JSON
 # person = {
@@ -63,5 +64,22 @@ def encode_user(o):
         return {'name': o.name, 'age':o.age, o.__class__.__name__: True}
     else:
         raise TypeError('Object of type User is not JSON Serializable')
-userJSON = json.dumps(user, default=encode_user)
+    
+from json import JSONEncoder
+
+class UserEncoder(JSONEncoder):
+    def default(self, o):
+        if isinstance(o, User):           
+            return {'name': o.name, 'age':o.age, o.__class__.__name__: True}
+        
+        return JSONEncoder.default(self, o)
+
+
+        
+        
+
+
+userJSON = json.dumps(user, cls=UserEncoder)
+# OR
+userJSON = UserEncoder().encode(user)
 print(userJSON)
