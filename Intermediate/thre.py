@@ -16,17 +16,17 @@ def increase(lock):
     # modify global variable
     global database_value
 
-    lock.acquire()
-    # get value and store in local copy
-    local_copy = database_value
-    # processing
-    local_copy += 1
-    # time.sleep() => switches to another thread
-    time.sleep(0.1) # race condition happens here, therefore, it happen when two or more threads try to try to modify the same varible at the same time
+    with lock:
+        # get value and store in local copy
+        local_copy = database_value
+        # processing
+        local_copy += 1
+        # time.sleep() => switches to another thread
+        time.sleep(0.1) # race condition happens here, therefore, it happen when two or more threads try to try to modify the same varible at the same time
 
-    # write new value to our DB
-    database_value = local_copy
-    lock.release()
+        # write new value to our DB
+        database_value = local_copy
+    
 
 if __name__ == "__main__":
 
