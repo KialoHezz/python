@@ -1,31 +1,34 @@
-from multiprocessing import Process
-import os
+from multiprocessing import Process, Value, Array, Lock
+from multiprocessing import Queue
 import time
 
-def square_numbers():
-    for i in range(100):
-        i * i
-        time.sleep(0.1)
+def square(numbers, queue):
+    for i in numbers:
+        queue.put(i*i)
 
-# create the list where to store all process
-processes = []
-# no. of CPU on my machine
-num_processes =  os.cpu_count()
+def make_negative(numbers, queue):
+    for i in numbers:
+        queue.put(-1*i)
+        
 
-# create processes
-for i in range(num_processes):
-    p = Process(target=square_numbers)
-    processes.append(p)
+if __name__ == "__main__":
+    
+    numbers = range(1, 6)
+    q = Queue()
+
+    p1 = Process(target=square, args=(numbers, q))
+    p2 = Process(target=make_negative, args=(numbers, q))
+
+    p1.start()
+    p2.start()
+
+    p1.join()
+    p2.join()
 
 
-# start the processes
-for p in processes:
-    p.start()
+    while not q.empty():
+        print(q.get())
 
-# Join the processes
-# Means wait for a process to finish and while i'm waiting ; i'm blocking main thread
-for p in processes:
-    p.join()
 
-# reach this point all processes are done
-print('end main')
+
+
