@@ -1,34 +1,22 @@
-"""# Are great tool for resource mgt , they allow you to allocate and release resource precisely when you want to.
-    1. Context manager in what are used for,
-    2. typical examples of context manager,
-    3. How to implement our context manager
-"""
+class ManagedFile:
+    def __init__(self, filename):
+        print('init')
+        self.filename = filename
 
-file = open('notes.txt', 'w')
+    def __enter__(self):
+        print('Enter')
+        self.file = open(self.filename, 'w')
 
-try:
-    file.write('some to doo..')
-finally:
-    file.close()
-
-# OR
+        return self.file
 
 
-# context manager
-with open('notes.txt', 'w') as file:
-    file.write('some todoo..')
+    def __exit__(self, exc_type, exec_value, exec_traceback):
+        if self.file:
+            self.file.close()
+            print('exit')
 
 
-from threading import Lock
 
-lock = Lock()
-
-lock.acquire()
-# ...
-lock.release()
-
-# OR
-
-# context manager
-with lock:
-    pass
+with ManagedFile('notes.tx') as file:
+    print('do some stuff')
+    file.write('some to doo')
