@@ -20,3 +20,24 @@ class ManagedFile:
 with ManagedFile('notes.tx') as file:
     print('do some stuff')
     file.write('some to doo')
+
+
+
+#  Generators, context manager & Decorator
+
+from contextlib import contextmanager
+
+
+@contextmanager
+def open_managed_file(filename):
+    f = open(filename, 'w')
+
+    try:
+        yield f
+    finally:
+        f.close()
+
+with open_managed_file('notes.txt') as f:
+    f.write('some todoo...')
+
+    
