@@ -1,34 +1,25 @@
-from multiprocessing import Process, Value, Array, Lock
-from multiprocessing import Queue
-import time
+from multiprocessing import Pool
 
-def square(numbers, queue):
-    for i in numbers:
-        queue.put(i*i)
-
-def make_negative(numbers, queue):
-    for i in numbers:
-        queue.put(-1*i)
+def cube(number):
+    return number * number * number
         
 
 if __name__ == "__main__":
+
+    numbers = range(10)
+    pool = Pool()
+    # map, apply, join, close
+    result = pool.map(cube, numbers)
+
+    pool.close()
+    pool.join()
+    print(result)
+
     
-    numbers = range(1, 6)
-    q = Queue()
 
-    p1 = Process(target=square, args=(numbers, q))
-    p2 = Process(target=make_negative, args=(numbers, q))
-
-    p1.start()
-    p2.start()
-
-    p1.join()
-    p2.join()
-
-
-    while not q.empty():
-        print(q.get())
-
+"""
+    Process pool objects controls a pool of worker process to which chops can be submitted and it can manage the avaible processes for you and split, for example, data into smaller chunks, which can then be processed in parallel by different processes
+"""
 
 
 
